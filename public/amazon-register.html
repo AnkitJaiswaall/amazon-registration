@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registration</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./images/amzon-favicon.ico">
+    <style>
+        body {
+            width: 400px;
+            height: 800px;
+            margin-left: 500px;
+            margin-top: 10px;
+        }
+        label{
+            font-weight: bold;
+            font-size: 14px;
+        }
+        p{
+            font-size: 14px;
+        }
+        #btn{
+            margin-left: -12px;
+            font-size: 14px;
+        }
+        .heading{
+            font-size: 30px;
+        }
+        #code{
+            width: 70px;
+        }
+        #number{
+            width: 260px;
+            margin-left: 10px;
+        }
+        .img{
+            text-align: center;
+            
+        }
+        .btn{
+            width: 350px;
+            background-color: #FFDD33 ;
+        }
+        .btn:hover{
+            background-color: #F6CD13;
+        }
+        .bi-caret-right-fill{
+            color: blue;
+        }
+        .name::placeholder{
+            font-size: 14px;
+        }
+        .phone::placeholder{
+            font-size: 14px;
+        }
+        .password::placeholder{
+            font-size: 14px;
+        }
+        #btn+span{
+            font-size: 8px;
+            margin-left: 4px;
+        }
+       
+        #code .country-code{
+            
+            font-size: 14px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="./images/amazon-logo.jpg" alt="">
+    </div>
+    
+    <form method="get" class="border rounded-3 border-2 p-4">
+        <div class="heading">Create Account</div>
+        <div>
+            <label for="name" class="form-label mt-2">Your Name</label>
+            <input required type="text" name="name" pattern="\w{4,20}\s\w{4,20}" class="form-control name" placeholder="First and last name">
+        </div>
+        <div >
+            <label for="phone" class="form-label mt-4">Mobile number</label>
+            <div class="input-group">
+                <div id="code">
+                    <select name="country-code"  class="form-control country-code">
+                        <option value="+91">IN+91</option>
+                        <option value="+001">+001</option>
+                        
+                    </select>
+                </div>
+                
+               
+                <div id="number">
+                    <input required type="texts" pattern="\d{10}"  name="phone" class="form-control phone" placeholder="Mobile number">
+                </div>
+               
+
+            </div>
+            
+        </div>
+        <div>
+            <label for="email" class="form-label mt-4">Email (optional)</label>
+            <input type="email" name="email" class="form-control">
+        </div>
+        <div>
+            <label for="password" class="form-label mt-4">Password</label>
+            <input required type="password" pattern="\w{6,}" name="password" class="form-control password" placeholder="At least 6 characters">
+            <p>Passwords must be at least 6 characters.</p>
+        </div>
+        <div>
+            <p class="mt-4">By enrolling your mobile phone number, you consent to receive automated security notifications via text message from Amazon. Message and data rates may apply.</p>
+        </div>
+        <div>
+            <button class="btn">Continue</button>
+        </div>
+        <div>
+            
+            <div>
+                <p class="mt-4">Already have an account?&nbsp;&nbsp;&nbsp;<a href="" id="btn"> Sign in</a><span class="bi bi-caret-right-fill"></span></p>
+            </div>
+            <div>
+                <p>Buying for work?&nbsp;&nbsp;&nbsp; <a href="" id="btn">Create a free business account</a><span class="bi bi-caret-right-fill"></span></p>
+            </div>
+        </div>
+        <div>
+            <p>By creating an account or logging in, you agree to Amazon’s <a href="">Conditions of Use</a>  and <a href="">Privacy Policy.</a></p>
+        </div>
+    </form>
+</body>
+</html>
